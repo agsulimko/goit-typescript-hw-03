@@ -57,9 +57,7 @@ abstract class House{
 }
 // Клас MyHouse успадковується від House
 class MyHouse extends House{
-    constructor(key: Key,  ) {
-    super(key);
-}
+   
 // Створюємо метод відкриття дверей ключем, якщо номер ключа співподає.
 openDoor(key: Key): void {
     if (this.key && key.getSignature() === this.key.getSignature()) {
