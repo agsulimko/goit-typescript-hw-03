@@ -26,18 +26,26 @@ class Employee {
     this.salary = salary;
   }
 
-  getEmployeeDetails() {
+  getEmployeeDetails():string {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
   }
+  
 }
 
 class Manager extends Employee {
-  // Реалізуйте конструктор та збільшіть salary на 10000
+  // Реалізуємо конструктор та збільшуємо salary на 10000
   
-  constructor(salary: number) {
-    super(10000, salary );
-  }
+   constructor( name: string,
+     department: string,
+     salary: number) {
+     super(name, department, salary +10000)
+ };
 }
 
+// створюэмо екземпляр класу
+const manager = new Manager("Artem", "Manager", 20000);
+//визиваємо метод для збільшення salary
+console.log(manager.getEmployeeDetails());
+ 
 
 export {};
